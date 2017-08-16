@@ -1,0 +1,107 @@
+header {
+    background-color: #244751;
+    color:#E8FDFF;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+main {
+    margin-top:15px;
+}
+
+.post {
+    margin-bottom:48px;
+    border-radius:5px;
+    background-color:white;
+    padding:15px;
+    box-shadow: 0px 5px 25px #d2d2d2;
+}
+.post:nth-child(odd):hover {
+    animation: rotateRight 1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rotateRight {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(5deg);
+    }
+}
+
+.post:nth-child(even):hover {
+    animation: rotateLeft 1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rotateLeft {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(-5deg);
+    }
+}
+
+.post .user-info {
+    align-items: center;
+}
+
+.post .user-info img {
+    border-radius:50%;
+}
+
+.post .user-info img:hover {
+    filter:grayscale(100%);
+}
+
+.post .user-info h2 {
+    font-size: 18px;
+}
+.post .user-info h2:hover {
+    color:red;
+}
+
+.post .user-info h3 {
+    font-size: 15px;
+}
+
+a.photo {
+    background-color:#244751;
+}
+
+a.photo:hover > img {
+    opacity: 0;
+}
+
+a.photo:hover {
+    animation: fadeInColor 4s linear infinite;
+}
+
+@keyframes fadeInColor{
+    0% {
+        background-color:#244751;
+    }
+    50% {
+        background-color:red;
+    }
+    100% {
+        background-color:#244751;
+    }
+}
+
+.post div .actions:hover {
+    color:red;
+}
+
+.post ul li p {
+    letter-spacing: 1px;
+}
+
+.post ul li strong:hover {
+    color:red;
+}
