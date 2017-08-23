@@ -72,6 +72,9 @@ main {
 
 a.photo {
     background-color:#fff;
+    overflow:hidden;
+    border-radius:15px;
+    
 }
 a.photo img {
     border-radius:15px;
