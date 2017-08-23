@@ -71,26 +71,24 @@ main {
 }
 
 a.photo {
-    background-color:#244751;
+    background-color:#fff;
+}
+a.photo img {
+    border-radius:15px;
+}
+a.photo img:hover {
+    animation: BlurPulse 4s linear infinite;
 }
 
-a.photo:hover > img {
-    opacity: 0;
-}
-
-a.photo:hover {
-    animation: fadeInColor 4s linear infinite;
-}
-
-@keyframes fadeInColor{
+@keyframes BlurPulse{
     0% {
-        background-color:#244751;
+        filter: blur(0px);
     }
     50% {
-        background-color:red;
+        filter: blur(20px);
     }
     100% {
-        background-color:#244751;
+        filter: blur(0px);
     }
 }
 
