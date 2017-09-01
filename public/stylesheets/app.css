@@ -1,17 +1,48 @@
 header {
-    background-color: #244751;
-    color:#E8FDFF;
+    color: #E8FDFF;
     text-align: center;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     width: 100%;
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    background: linear-gradient(270deg, #1a3b45, #2691b0);
+    background-size: 400% 400%;
+    -webkit-animation: GradientFade 30s ease infinite;
+    -moz-animation: GradientFade 30s ease infinite;
+    animation: GradientFade 30s ease infinite;
+    z-index:999;
+}
+
+@-webkit-keyframes GradientFade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientFade {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes GradientFade { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 body {
     background-color:whitesmoke;
+    padding-top:100px;
 }
 
 main {
+    max-width: 450px;
+    margin: 0 auto;
     margin-top:15px;
+    width: 100%;
 }
 
 .post {
