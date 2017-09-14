@@ -41,8 +41,16 @@ body {
 main {
     max-width: 450px;
     margin: 0 auto;
-    margin-top:15px;
+    margin-top:35px;
     width: 100%;
+}
+.login-info {
+    margin-top: -10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.logoutLink {
+    margin-left:10px;
 }
 
 .post {
@@ -52,31 +60,31 @@ main {
     padding:15px;
     box-shadow: 0px 5px 25px #d2d2d2;
 }
-.post:nth-child(odd):hover {
-    animation: rotateRight 1s linear;
-    animation-fill-mode: forwards;
-}
-@keyframes rotateRight {
-    0% {
-        transform:rotate(0deg);
-    }
-    100% {
-        transform:rotate(5deg);
-    }
-}
+/*.post:nth-child(odd):hover {*/
+/*    animation: rotateRight 1s linear;*/
+/*    animation-fill-mode: forwards;*/
+/*}*/
+/*@keyframes rotateRight {*/
+/*    0% {*/
+/*        transform:rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform:rotate(5deg);*/
+/*    }*/
+/*}*/
 
-.post:nth-child(even):hover {
-    animation: rotateLeft 1s linear;
-    animation-fill-mode: forwards;
-}
-@keyframes rotateLeft {
-    0% {
-        transform:rotate(0deg);
-    }
-    100% {
-        transform:rotate(-5deg);
-    }
-}
+/*.post:nth-child(even):hover {*/
+/*    animation: rotateLeft 1s linear;*/
+/*    animation-fill-mode: forwards;*/
+/*}*/
+/*@keyframes rotateLeft {*/
+/*    0% {*/
+/*        transform:rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform:rotate(-5deg);*/
+/*    }*/
+/*}*/
 
 .post .user-info {
     align-items: center;
@@ -135,4 +143,29 @@ a.photo img:hover {
 
 .post ul li strong:hover {
     color:red;
+}
+
+.user-like:hover {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.actions button.user-like {
+  border:0px;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+    color:#244751;
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+    color:red;
+  }
 }

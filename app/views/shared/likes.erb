@@ -23,7 +23,7 @@
       <input type="hidden" name="post_id" value="<%= post.id %>">
       <button class="button" type="submit">
           <% if post.like_count >= 1 %>
-            &#9829; <%= post.like_count %> likes
+            <span class="heart">&#9829;</span> <%= post.like_count %> likes
           <% else %>
             <%= post.like_count %> likes
           <% end %>
@@ -34,7 +34,7 @@
 
   <!-- show like count without any form -->
     <% if post.like_count >= 1 %>
-        &#9829; <%= post.like_count %> likes
+       <span class="heart">&#9829;</span> <%= post.like_count %> likes
     <% else %>
         <%= post.like_count %> likes
     <% end %>
