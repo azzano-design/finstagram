@@ -32,9 +32,12 @@ header {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-header h1 {
+header h1 a {
     letter-spacing: 2px;
-    color:#fff;
+    color: rgba(255,255,255,0.8);
+}
+header h1 a:hover {
+    color: rgba(255,255,255,1);
 }
 .login-info a {
     margin-right:15px;
@@ -171,7 +174,7 @@ a.photo img:hover {
 .newPhoto {
     opacity:0.1;
     float:right; 
-    margin-top: 20px; 
+    margin-top: 15px; 
 }
 .newPhoto.postOk {
     opacity: 1;
@@ -194,6 +197,7 @@ a.photo img:hover {
     transition: all 0.3s;
     color:#fff;
 }
+
 i {
     margin-right:5px;
 }
@@ -240,7 +244,9 @@ i {
     width:100%;
     border-radius: 5px;
 }
-
+.new-comment {
+    margin-top: 25px;
+}
 @media (max-width:500px) {
     main {
         max-width:350px;
