@@ -11,9 +11,9 @@ header {
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
     background: linear-gradient(270deg, #1a3b45, #2691b0);
     background-size: 400% 400%;
-    -webkit-animation: GradientFade 30s ease infinite;
-    -moz-animation: GradientFade 30s ease infinite;
-    animation: GradientFade 30s ease infinite;
+    -webkit-animation: GradientFade 20s ease infinite;
+    -moz-animation: GradientFade 20s ease infinite;
+    animation: GradientFade 20s ease infinite;
     z-index:999;
 }
 
@@ -32,6 +32,10 @@ header {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+header 
+.login-info a {
+    margin-left:10px;
+}
 
 body {
     background-color:whitesmoke;
@@ -41,7 +45,7 @@ body {
 main {
     max-width: 450px;
     margin: 0 auto;
-    margin-top:35px;
+    margin-top:50px;
     width: 100%;
 }
 .login-info {
@@ -60,31 +64,37 @@ main {
     padding:15px;
     box-shadow: 0px 5px 25px #d2d2d2;
 }
-/*.post:nth-child(odd):hover {*/
-/*    animation: rotateRight 1s linear;*/
-/*    animation-fill-mode: forwards;*/
-/*}*/
-/*@keyframes rotateRight {*/
-/*    0% {*/
-/*        transform:rotate(0deg);*/
-/*    }*/
-/*    100% {*/
-/*        transform:rotate(5deg);*/
-/*    }*/
-/*}*/
+.post:nth-child(odd):hover {
+    animation: rotateRight .3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rotateRight {
+    0% {
+        transform:rotate(0deg);
+    }
+    50% {
+        transform:rotate(5deg);
+    }
+    0% {
+        transform:rotate(0deg);
+    }
+}
 
-/*.post:nth-child(even):hover {*/
-/*    animation: rotateLeft 1s linear;*/
-/*    animation-fill-mode: forwards;*/
-/*}*/
-/*@keyframes rotateLeft {*/
-/*    0% {*/
-/*        transform:rotate(0deg);*/
-/*    }*/
-/*    100% {*/
-/*        transform:rotate(-5deg);*/
-/*    }*/
-/*}*/
+.post:nth-child(even):hover {
+    animation: rotateLeft .3s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rotateLeft {
+    0% {
+        transform:rotate(0deg);
+    }
+    50% {
+        transform:rotate(-5deg);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
 
 .post .user-info {
     align-items: center;
@@ -112,25 +122,17 @@ main {
 a.photo {
     background-color:#fff;
     overflow:hidden;
-    border-radius:15px;
+    border-radius:5px;
 }
 a.photo img {
-    border-radius:15px;
+    border-radius:5px;
+    transition:scale(1);
+    transition: all 0.3s;
 }
 a.photo img:hover {
-    animation: BlurPulse 4s linear infinite;
-}
-
-@keyframes BlurPulse{
-    0% {
-        filter: blur(0px);
-    }
-    50% {
-        filter: blur(20px);
-    }
-    100% {
-        filter: blur(0px);
-    }
+  -moz-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
 }
 
 .post div .actions:hover {
@@ -154,6 +156,19 @@ a.photo img:hover {
   border:0px;
 }
 
+.button {
+    border:1px solid rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    background:transparent;
+    padding:5px, 15px, 5px, 15px;
+    border-radius: 5px;
+}
+.button:hover {
+    background:rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    color:#fff;
+}
+
 @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
@@ -168,4 +183,19 @@ a.photo img:hover {
     transform: scale3d(1, 1, 1);
     color:red;
   }
+}
+.errors, .error {
+    color: red;
+    line-height: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+    display: block;
+}
+.form-group {
+    margin-bottom: 1.25em;
+}
+.form-group input[type=text], input[type=password], input[type=email] {
+    padding:.6rem;
+    width:100%;
+    border-radius: 5px;
 }
