@@ -9,9 +9,9 @@
       <input name="_method" type="hidden" value="delete">
       <button class="button user-like" type="submit">
           <% if post.like_count >= 1 %>
-            &#9829; <%= post.like_count %> likes
+            <i class="fa fa-heart heart" aria-hidden="true"></i> <%= post.like_count %> likes
           <% else %>
-            <%= post.like_count %> likes
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i> <%= post.like_count %> likes
           <% end %>
       </button>
     </form>
@@ -21,11 +21,11 @@
     <!-- display our existing form to create a like -->
     <form action="/likes" method="POST">
       <input type="hidden" name="post_id" value="<%= post.id %>">
-      <button class="button" type="submit">
+      <button class="button user-dislike" type="submit">
           <% if post.like_count >= 1 %>
-            <span class="heart">&#9829;</span> <%= post.like_count %> likes
+            <i class="fa fa-heart heart" aria-hidden="true"></i> <%= post.like_count %> likes
           <% else %>
-            <%= post.like_count %> likes
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i> <%= post.like_count %> likes
           <% end %>
       </button>
     </form>
@@ -34,8 +34,8 @@
 
   <!-- show like count without any form -->
     <% if post.like_count >= 1 %>
-       <span class="heart">&#9829;</span> <%= post.like_count %> likes
+      <i class="fa fa-heart heart" aria-hidden="true"></i> <%= post.like_count %> likes
     <% else %>
-        <%= post.like_count %> likes
+      <i class="fa fa-heart-o heart" aria-hidden="true"></i> <%= post.like_count %> likes
     <% end %>
 <% end %>

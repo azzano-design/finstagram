@@ -9,7 +9,13 @@
     </a>
     <div class="actions">
       <%= erb(:"shared/likes", { locals: { post: post }}) %>
-      <span class="comment-count"><%= post.comment_count %> comments</span>
+      <span class="comment-count">
+        <% if post.comment_count >= 1 %>
+          <i class="fa fa-comment" aria-hidden="true"></i><%= post.comment_count %> comments
+        <% else %>
+          <i class="fa fa-comment-o" aria-hidden="true"></i><%= post.comment_count %> comments
+        <% end %>
+      </span>
     </div>
     <ul class="comments">
       <% post.comments.each do |comment| %>

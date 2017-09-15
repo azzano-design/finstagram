@@ -5,22 +5,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300italic,700italic,700,300"/>
         <link rel="stylesheet" href="/stylesheets/lib.css"/>
         <link rel="stylesheet" href="/stylesheets/app.css"/>
-        <link rel="stylesheet" href="/stylesheets/animate.css"/>
+        <link rel="stylesheet" href="/stylesheets/font-awesome.css"/>
+        <link rel="stylesheet" href="/stylesheets/animate.min.css"/>
         <script rel="javascript" src="/javascript/wow.js"></script>
-        <script>
-          new WOW().init();
-        </script>
     </head>
     <body>
         <header>
           <h1><a href="/">Finstagram</h1></a>
           <div class="login-info">
             <% if current_user %>
-              <%= current_user.username %>
-              <a href="/logout">Logout</a>
+              <i class="fa fa-user-circle" aria-hidden="true"></i><%= current_user.username %> | <i class="fa fa-power-off" aria-hidden="true"></i><a href="/logout">Logout</a>
             <% else %>
-              <a href="/login">Login</a>
-              <a href="/signup">Signup</a>
+              <i class="fa fa-user-circle" aria-hidden="true"></i><a href="/login">Login</a> | <i class="fa fa-user-plus" aria-hidden="true"></i><a href="/signup">Signup</a>
             <% end %>
           </div>
         </header>
@@ -28,4 +24,7 @@
             <%= yield %>
         </main>
     </body>
+    <script>
+      new WOW().init();
+    </script>
 </html>
